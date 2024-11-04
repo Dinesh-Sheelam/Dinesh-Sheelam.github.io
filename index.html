@@ -1,168 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website – Dinesh Present</title>
+        <link rel="icon" href="/images/portfolio.png" type="image/png">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/f53f5d2ec3.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    </head>
+    <body>
+    <div id="header">
+        <canvas id="background-canvas"></canvas>
+        <div class="container">
+            <nav>
+                <img src="" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="dineshsheelam_Resume.pdf" download>Resume</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>I am <span>Dinesh</span> Present</h1>
+                <p>Data Scientist</p>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------about------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about.jpeg">
+                    <img src="images/updated_about.JPG">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Welcome! I'm Dinesh Present, a current graduate student about to finish my M.S. in Computational Data Science at Georgia Tech. 
+                        With a background in Cognitive Science and Computer Science, coupled with a passion for the outdoors, I've developed a deep 
+                        interest in leveraging data to drive impactful decisions, particularly in the realm of materials science and environmental sustainability.
+                        I am driven by a relentless pursuit of knowledge and improvement, and a dedication to using my skills for innovative, complex problem solving.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('competitions')">Competitions and Awards</p>
+                            <p class="tab-links" onclick="opentab('fun-facts')">Fun Facts</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Programming Languages</span><br>Python, R, JavaScript, HTML/CSS, Assembly Language</li>
+                                <li><span>Machine Learning & Deep Learning</span><br>PyTorch, TensorFlow, Keras</li>
+                                <li><span>Data & Visualization</span><br>Pandas, NumPy, Tableau, D3.js</li>
+                                <li><span>Database & Data Manipulation</span><br>SQL, Hadoop, Spark</li>
+                                <li><span>Cloud Computing</span><br>Microsoft Azure, AWS, GCP</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>HercTech</span><br>Data Analyst (2020 – Present)</li>
+                                <li><span>Matmerize</span><br>Technical Lead in Data Analytics (2024)</li>
+                                <li><span>Ramprasad Research Group</span><br>Research Assistant (2023 – 2024)</li>
+                                <li><span>Easy Day Sports</span><br>Marketing Coordinator and Analyst (2022 – 2023)</li>
+                                <li><span>ILINX LLC</span><br>Founder and CEO (2020 – 2022)</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Georgia Institute of Technology</span><br>M.S. in Analytics, Computational Data Science Track (Aug 2023 – Aug 2024)</li>
+                                <li><span>University of Virginia</span><br>Dual B.A. in Cognitive Science and Media Studies, Computer Science Track (Aug 2017 – May 2021)</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="competitions">
+                            <ul>
+                                <li><span>Georgia Research Alliance Student Scholarship</span>Nominated by a Georgia Tech professor and selected as one of ten STEM students statewide to receive funding for research in a lab on campus</li>
+                                <li><span>ATLytiCS Data for Hope™ Competition</span><br>Team Won Second Place; Prize of $2000 (2023)</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="fun-facts">
+                            <ul>
+                                <li>• I biked across the country when I was 16 (3200 miles, from South Carolina to California)</li>
+                                <li>• I built and camped in an igloo for two weeks</li>
+                                <li>• I have two different shaped ears – one attached and one detached</li>
+                                <li>• Botanically speaking, strawberries are not considered berries, whereas bananas are</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- -------------------expertise------------------- -->
+    <div id="expertise">
+        <div class="container">
+            <h1 class="sub-title">Expertise</h1>
+            <div class="expertise-list">
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Machine Learning</h2>
+                    <p>Building predictive models and neural networks to solve real-world problems in various domains.</p>
+                    <!-- <a href="#">Learn more</a> -->
+                </div>
+                <div>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h2>Data Analysis</h2>
+                    <p>Utilizing statistical modeling and machine learning to extract insights from complex datasets.</p>
+                    <!-- <a href="#">Learn more</a> -->
+                </div>
+                <div>
+                    <i class="fa-solid fa-cloud"></i>
+                    <h2>Cloud Computing</h2>
+                    <p>Leveraging scalable cloud infrastructure to enhance data processing, storage, and collaboration across distributed systems.</p>
+                    <!-- <a href="#">Learn more</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------portfolio------------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/portfolio_optimization.jpg">
+                    <div class="layer">
+                        <h3>Portfolio Optimization Simulation with MCMC</h3>
+                        <p>A project utilizing Monte Carlo Markov Chains to optimize investment portfolios by simulating potential returns and risks.</p>
+                        <a href="mcmc_simulations.html" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/xray.jpg">
+                    <div class="layer">
+                        <h3>Convolutional Neural Net for Thoracic Diagnosis from Chest X-rays</h3>
+                        <p>A project using Convolutional Neural Networks to predict thoracic conditions from chest X-ray images, enhancing diagnostic accuracy.</p>
+                        <a href="cnn_xrays.html" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/air_quality.png">
+                    <div class="layer">
+                        <h3>Air Quality Visualization</h3>
+                        <p>A project that visualizes air quality data using interactive maps and charts.</p>
+                        <a href="https://Dinesh-Sheelam.github.io/air-quality-visualization/src/index.html" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/houses.jpg">
+                    <div class="layer">
+                        <h3>House Price Prediction</h3>
+                        <p>Predicting house prices based on various features using a Random Forest Regressor.</p>
+                        <a href="https://github.com/Dinesh-Sheelam/house-price-prediction" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/todo_preview.png">
+                    <div class="layer">
+                        <h3>Task List Web Application</h3>
+                        <p>This interactive to-do list app built with HTML, CSS, and JavaScript, featuring local storage for task persistence and a clean, responsive design. Users can add, edit, and delete tasks, as well as mark them as completed with intuitive controls.</p>
+                        <a href="https://Dinesh-Sheelam.github.io/todo_list/todo_index.html" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a id="see-more-btn" class="btn">See more</a>
+            <a id="collapse-btn" class="btn" style="display: none;">Collapse</a>
+        </div>
+    </div>
 
-        body {
-            background: #ffeee6;
-            color: #2d3436;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+    <!-- -------------------contact------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i><a class="contact-me" href="mailto:sdinesh1s@semo.edu">sdinesh1s@semo.edu</a></p>
+                    <p><i class="fa-solid fa-phone"></i><a class="contact-me" href="tel:+13143339519">314-333-9519</a></p>
+                    <div class="social-icons">
+                        <!-- or <i class="fa-brands fa-linkedin-in"></i> -->
+                        <a href="https://github.com/Dinesh-Sheelam"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/dineshsheelam/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100006857775780"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <a href="dineshsheelam_Resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                        <span id="msg"></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Dinesh Present. All rights reserved.</p>
+        </div>
+    </div>
 
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
+   <script src="script.js"></script>
 
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 1.5rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            z-index: 10;
-        }
-
-        nav a {
-            color: #2d3436;
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #ff6b6b;
-        }
-
-        .content {
-            position: relative;
-            z-index: 2;
-            padding: 0 2rem;
-            margin-top: 40vh;
-            text-align: left;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .intro {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .intro span {
-            color: #ff6b6b;
-        }
-
-        .title {
-            font-size: 1.5rem;
-            color: #636e72;
-        }
-
-        @media (max-width: 768px) {
-            .intro {
-                font-size: 2rem;
-            }
-            .title {
-                font-size: 1.2rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div id="particles-js"></div>
-    
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-        <a href="#resume">Resume</a>
-    </nav>
-
-    <main class="content">
-        <h1 class="intro">I am <span>Your Name</span></h1>
-        <h2 class="title">Your Title</h2>
-    </main>
-
-    <script>
-        particlesJS('particles-js',
-            {
-                "particles": {
-                    "number": {
-                        "value": 80,
-                        "density": {
-                            "enable": true,
-                            "value_area": 800
-                        }
-                    },
-                    "color": {
-                        "value": "#ff6b6b"
-                    },
-                    "shape": {
-                        "type": "circle"
-                    },
-                    "opacity": {
-                        "value": 0.5,
-                        "random": false
-                    },
-                    "size": {
-                        "value": 3,
-                        "random": true
-                    },
-                    "line_linked": {
-                        "enable": true,
-                        "distance": 150,
-                        "color": "#ff6b6b",
-                        "opacity": 0.2,
-                        "width": 1
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 2,
-                        "direction": "none",
-                        "random": false,
-                        "straight": false,
-                        "out_mode": "out",
-                        "bounce": false
-                    }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": {
-                            "enable": true,
-                            "mode": "grab"
-                        },
-                        "onclick": {
-                            "enable": true,
-                            "mode": "push"
-                        },
-                        "resize": true
-                    }
-                },
-                "retina_detect": true
-            }
-        );
-    </script>
-</body>
+    </body>
 </html>
