@@ -54,8 +54,8 @@ A lighthearted section with interesting facts about me.
 
 ## Contact
 Feel free to reach out if you have any questions or suggestions:
-- 📧 Email: [hpresent6@gatech.edu](mailto:hpresent6@gatech.edu)
-- 💼 LinkedIn: [linkedin.com/in/hilarypresent](https://www.linkedin.com/in/hilarypresent)
-- 🌐 GitHub: [github.com/hilpresent](https://github.com/hilpresent)
+- 📧 Email: [dsheelam1s@semo.edu](mailto:dsheelam1s@semo.edu)
+- 💼 LinkedIn: [linkedin.com/in/dineshsheelam](https://www.linkedin.com/in/dineshsheelam)
+- 🌐 GitHub: [github.com/Dinesh-Sheelam](https://github.com/Dinesh-Sheelam)
 
 Thank you for visiting my portfolio website!
